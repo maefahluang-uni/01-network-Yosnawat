@@ -20,7 +20,10 @@ The `MockWebServer` in package `th.mfu` serves the web server in our system. It 
 4. Finally, close the client socket 
 5. Study the code in `main()` and tell me What it does?
 ```
- write your through here.
+ Connects to a web server
+Sends a basic HTTP GET request
+Receives and displays the server's response
+Cleanly terminates the connection
 ```
 6. Run the `main()`, point the web browser to `http://localhost:8080` and `http://localhost:8081`
 It should shows a simple HTML with the word such as  `Hello, Web! on Port 8080`.
@@ -52,7 +55,19 @@ Think about the following,  modify the code to experiment it and put your though
 - What would be the benefit of running many instances?
 
 ```
-  Your thought here...
+use any available port like new MockWebServer(3000), new MockWebServer(9090), etc.
+Make sure the port isn't already in use by another application
+Create more Thread objects in the main() method
+Each thread should use a different port number
+Modify the response string in the run() method to include:
+For tables:
+Add HTML <table>, <tr>, <td> tags
+For more text:
+Add <h1>, <h2>, <p>, <div> tags
+For images:
+Use <img src="URL"> tags pointing to online images
+Load Distribution
+Testing and Development
 ```
 **Please push the code back to Github to submit this lab**
 After you push, ensure you have green checkmark on the repository.
